@@ -11,7 +11,7 @@ plt.rcParams['ytick.major.width'] = 2
 plt.rcParams['ytick.minor.size'] = 6
 plt.rcParams['ytick.minor.width'] = 1
 plt.rcParams['axes.linewidth'] = 2
-plt.rcParams['font.size']=20
+plt.rcParams['font.size']=18
 plt.rcParams['mathtext.default']='regular'
 plt.rcParams['lines.markersize']=8
 plt.rcParams['xtick.major.pad']='3'
@@ -36,10 +36,10 @@ plt.plot(hds['waveobs'],hds['flux']+0.3,lw=1.5,color=colors[3])
 solar=ascii.read('data/KIC10006158_spec.txt')
 plt.plot(solar['waveobs'],solar['flux']-0.3,lw=1.5,color=colors[1])
 
-plt.xlim([516.65,519.7])
+plt.xlim([516.501,519.42])
 plt.ylim([-0.7,1.8])
 
-plt.annotate('KIC8144907 ([Fe/H] = -2.6)',(516.7,1.5),xycoords='data',color=colors[3])
+plt.annotate('KIC8144907 ([Fe/H] = -2.7)',(516.7,1.5),xycoords='data',color=colors[3])
 plt.annotate('KIC10006158 ([Fe/H] = 0.0)',(516.7,-0.5),xycoords='data',color=colors[1])
 
 plt.xlabel('Wavelength (nm)')
@@ -49,7 +49,8 @@ plt.draw()
 
 plt.tight_layout()
 
-plt.savefig('fig1.png',dpi=200)
+plt.savefig('fig1-3.png',dpi=200)
+plt.savefig('fig1.pdf')
 
 
 
